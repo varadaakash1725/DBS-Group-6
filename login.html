@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" id="userid" placeholder="Username" required>
+            <input type="password" id="pass" placeholder="Password" required>
+            <button onclick="validate()">Submit</button>
+        </form>
+        <p>
+            New User? <a href="{% url 'register' %}">Signup here!</a>
+        </p>
+    </div>
+<script>
+    function validate()
+    {
+        
+        let y=document.getElementById("pass").value;
+        if(y.length<8)
+        {
+            alert("password length should be greater than length 8");
+        }
+        else{
+            document.form.action="{% url 'dashboard' %}";
+        }
+    }
+</script>
+</body>
+</html>

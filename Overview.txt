@@ -1,0 +1,41 @@
+wealth manager
+appointment with managers
+convinenet location and time
+HNI and wealth managers(both should be able to login)
+
+
+
+Registration Dashboard for Both(HNI and WM)
+>First name
+>last name
+>DOB
+>Userid 
+>Password
+(
+  Strong password with min 8 characters with symbols,error message
+)
+>role :(HNI or wealth)
+hni01    wm01
+hni02	 
+>submit(store the data based on roles)
+>Login
+
+
+after login >
+directly scheduling appointment 
+>Appointment Date
+>time 
+>location
+>submit(store Appointment details in database)
+>send notification to their respective panels
+
+
+>with notification add 2 buttons to accept or reject with a reason
+
+
+Databases tables
+HNI (HNI_ID,First name, last name, DOB, Userid ,Password)
+WM  (WM_ID,First name, last name, DOB, Userid ,Password)
+Scheduling appointment(HNI_ID(fk),WM_ID(fk),Time(PK),Location)
+
+
